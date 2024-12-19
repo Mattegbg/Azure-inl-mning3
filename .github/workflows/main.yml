@@ -21,9 +21,10 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: npm install, test
+      - name: npm install, build, and test
         run: |
           npm install
+          npm run build --if-present
           npm run test --if-present
 
       - name: Zip artifact for deployment
@@ -58,4 +59,4 @@ jobs:
           app-name: 'Capybara2'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_37d8bbed12774a5294a1385e63192a69 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_ccd611439f7a460492ffc5b7855fe849 }}
