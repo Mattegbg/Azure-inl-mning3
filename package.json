@@ -1,0 +1,26 @@
+{
+  "name": "azure-inl-mning3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mattegbg/Azure-inl-mning3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mattegbg/Azure-inl-mning3/issues"
+  },
+  "homepage": "https://github.com/Mattegbg/Azure-inl-mning3#readme",
+  "dependencies": {
+    "20": "^3.1.9"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
