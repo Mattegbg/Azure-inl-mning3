@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
           path: release.zip
 
   deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: build
     environment:
       name: 'Production'
@@ -59,4 +59,4 @@ jobs:
           app-name: 'Capybara2'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_ccd611439f7a460492ffc5b7855fe849 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_13166b23c156481498c14ea0759f7ce4 }}
