@@ -21,18 +21,16 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: npm install
+      - name: npm install, test
         run: |
           npm install
-
-      - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+          npm run test
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: release.zip
+          path: .
 
   deploy:
     runs-on: windows-latest
@@ -47,8 +45,6 @@ jobs:
         with:
           name: node-app
 
-      - name: Unzip artifact for deployment
-        run: unzip release.zip
       
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
